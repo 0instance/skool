@@ -1,0 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['login']) && $_SESSION['login'] == 1) {
+	die("Prisijunges");
+} else 
+header('Location: login.php');
+
+?>
+
+<a href="login.php?logout=1">Log me out</a>
